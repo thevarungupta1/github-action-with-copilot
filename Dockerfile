@@ -6,7 +6,7 @@ COPY SampleApii.csproj ./
 RUN dotnet restore
 
 COPY . .
-RUN dotnet build --no-restore --configuration Release --output /app/build
+RUN dotnet build --configuration Release --output /app/build
 
 # Stage 2: Publish
 FROM build AS publish
